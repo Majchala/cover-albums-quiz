@@ -20,10 +20,13 @@ saveHighScore = e => {
         score: mostRecentScore,
         name: username.value};
 
+    // uložít se pouze 5 nejvyšších score 
     highScores.push(score);
     highScores.sort( (a,b) => b.score - a.score);
     highScores.splice(5);
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    wundow.location.assign("/");
+    window.location.assign("./index.html");
+
 };
+
