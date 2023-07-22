@@ -3,6 +3,31 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+let loaderWrapper = document.getElementsByClassName("loader-wrapper");
+let loader = document.getElementsByClassName("loader");
+let inner = document.getElementsByClassName("loader-inner");
+let wrapper = document.getElementById("wrapper");
+
+setTimeout(() => {
+    loaderWrapper.style.visibility = 'hidden';
+}, 1000);
+
+setTimeout(() => {
+    loader.style.display = 'none';
+}, 1000);
+
+setTimeout(() => {
+    inner.style.visibility = 'hidden';
+}, 1000);
+
+setTimeout(() => {
+    wrapper.style.visibility = 'hidden';
+}, 3000);
+
+
+//setTimeout(function(){loaderWrapper.style.display = none}, 3000)
+//setTimeout(function(){loader.style.display = none}, 3000)
+
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -10,6 +35,8 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+
+// UDĚLAT IMPORT SOUBOR 
 let questions = [
     {
         question: 'What is 2 + 2?',
