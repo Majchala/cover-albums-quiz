@@ -2,11 +2,16 @@
     list-style: none;
     padding-left: 0;
     margin-bottom: 4rem;
+    color: var(--light-color);
 }
 
 #highScores {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
     margin-bottom: 0.5rem;
+}
+
+li {
+    color: var(--light-color);
 }
 
 

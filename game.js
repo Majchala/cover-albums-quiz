@@ -8,17 +8,7 @@ let loader = document.getElementsByClassName("loader");
 let inner = document.getElementsByClassName("loader-inner");
 let wrapper = document.getElementById("wrapper");
 
-setTimeout(() => {
-    loaderWrapper.style.visibility = 'hidden';
-}, 1000);
 
-setTimeout(() => {
-    loader.style.display = 'none';
-}, 1000);
-
-setTimeout(() => {
-    inner.style.visibility = 'hidden';
-}, 1000);
 
 setTimeout(() => {
     wrapper.style.visibility = 'hidden';
