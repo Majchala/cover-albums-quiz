@@ -35,7 +35,7 @@ let questions = [
         choice3: '7',
         answer: 2,
     },
-    {
+    { 
         question: 'What is 2 + 7?',
         choice1: '9',
         choice2: '4',
@@ -43,6 +43,7 @@ let questions = [
         answer: 1,
     },
     {
+        image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*YQgaKfVzK-YpxyT3NYqJAg.png',
         question: 'What is 0 + 2?',
         choice1: '5',
         choice2: '4',
@@ -50,6 +51,7 @@ let questions = [
         answer: 3,
     },
     {
+        image: "Návrh bez názvu.jpg",
         question: 'What is 2 + 56?',
         choice1: '5',
         choice2: '58',
@@ -80,9 +82,6 @@ getNewQuestion = () => {
     progressText.innerText = `Question: ${questionCounter}/${MAX_QUESTIONS}`;
     // updating the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
-
-   
 
     // vypsání náhodné otázky
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
