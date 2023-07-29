@@ -127,3 +127,8 @@ input::placeholder {
     color: #aaa;
 }
 
+#finalText {
+    font-size: 3rem;
+    color: white;
+}
+

@@ -26,8 +26,13 @@ body {
 img {
     width: 20rem;
     height: 20rem;
-    margin: 2px auto;
+    margin: 20px auto;
+    display: flex;
+    border-radius: 12px;
+}
 
+#question {
+    margin-top: 40px;
 }
 
 .choice-container:hover {
@@ -72,6 +77,7 @@ img {
 
 .hud-main-text {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #progressBar {
@@ -93,7 +99,6 @@ img {
     .choice-container{
         min-width: 40rem;
     }
-
 }
 
 .correct {
