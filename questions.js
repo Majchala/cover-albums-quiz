@@ -40,7 +40,7 @@ let questions = [
         answer: 1,
     },
     {
-        image: "assets/Q11.jpg",
+        image: "assets/Q11.png",
         question: 'The author?',
         choice1: 'The Velvet Underground',
         choice2: 'Andy Warhol',
@@ -56,7 +56,7 @@ let questions = [
         answer: 1,
     },
     {
-        image: "assets/Q11.jpg",
+        image: "assets/Q1.jpg",
         question: 'The album name?',
         choice1: 'AM',
         choice2: 'Suck it and See',
@@ -79,7 +79,6 @@ let questions = [
         choice3: 'The Who',
         answer: 2,
     },
-    // -> 10 
     {
         image: "assets/Q8.png",
         question: 'The author?',
@@ -98,7 +97,7 @@ let questions = [
     },
     {
         image: "assets/Q4.png",
-        question: 'the album name?',
+        question: 'The album name?',
         choice1: 'Nevermind',
         choice2: 'In Utero',
         choice3: 'Bleach',
@@ -108,7 +107,7 @@ let questions = [
         image: "assets/Q6.png",
         question: 'The author and the album name?',
         choice1: 'Fletwood Mac - Fleetwood Mac',
-        choice2: 'Beatles - The Beatles',
+        choice2: 'Beatles - The Beatles (White Album)',
         choice3: 'Pink Floyd - The Wall',
         answer: 2,
     },
@@ -251,3 +250,5 @@ let questions = [
 ]
 
 export default questions;
+
+console.log(questions.length)

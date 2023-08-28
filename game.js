@@ -15,7 +15,7 @@ const imageContainer = document.getElementById("image-container")
 
 setTimeout(() => {
     wrapper.style.visibility = 'hidden';
-}, 3000);
+}, 1500);
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -27,6 +27,8 @@ let availableQuestions = [...questions];
 // QUESTIONS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 15;
+
+//celkově 31 otázek
 
 const startGame = () => {
     questionCounter = 0;
@@ -84,18 +86,34 @@ choices.forEach(choice => {
         // class pro správnou/nesprávnou odpoved
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
+         // obarvení celého rodiče podle správnosti odpovědi
+        selectedChoice.parentElement.classList.add(classToApply);
+        
+    
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
 
-        // obarvení celého rodiče podle správnosti odpovědi
-        selectedChoice.parentElement.classList.add(classToApply);
+        if (classToApply === "incorrect") {
+            const correctAnswer = currentQuestion.answer;
+            choices[correctAnswer - 1].parentElement.classList.add('correct');
+        }
+
+
+
+
+        
+
+       
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
+            if (classToApply === "incorrect") {
+                choices[currentQuestion.answer - 1].parentElement.classList.remove('correct');
+            }
             getNewQuestion();
         }, 1000);
-        });        
-    })
+    });
+});
 
     const incrementScore = num => {
         score += num;

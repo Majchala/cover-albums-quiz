@@ -12,23 +12,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+
+     <!-- FAVICON -->
+     <link rel="icon" href="assets/music-favicon.png" type="image/png">
 </head>
 <body>
 
+    <!-- LOADER -->
     <div id="wrapper">
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
       </div>
-</div>
+    </div>
   
-      <!--- OBJEVÍ SE PO NAČTENÍ VŠEHO - ZKUSIT V PLNÉM PROVOZUR
-      <script>
-          $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
-          });
-
-      </script>
-    -->
     <div class="container">
         <div id="game" class="justify-center flex-column">
             <!-- QUESTION BAR -->
@@ -72,5 +68,6 @@
 
     <script src="game.js" type="module"></script>
     <script src="questions.js" type="module"></script>
+    <script src="end.js" type="module"></script>
 </body>
 </html>

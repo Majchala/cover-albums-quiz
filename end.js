@@ -9,13 +9,13 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 5;
 
 // Výsledek - OPRAVIT JEŠTĚ
-finalScore.innerText = mostRecentScore;
+finalScore.innerText = `You scored ${mostRecentScore} out of 150 points.`;
 
 if (mostRecentScore <= 50) {finalText.innerHTML = '<img src="https://media.giphy.com/media/cr9vIO7NsP5cY/giphy.gif">'
-+ '<p>LOL. You should definitely listen to more quality music.</p>';}
++ '<p>LOL. You should listen to quality music more </p>';}
 else if (mostRecentScore <= 100) {finalText.innerHTML = '<img src="https://media.giphy.com/media/VhWVAa7rUtT3xKX6Cd/giphy.gif">'
 + '<p>Not bad at all, but you still need to educate yourself</p>';}
-else {finalText.innerHTML = 'img src="https://media.giphy.com/media/44gu1V41ejJni/giphy.gif">' + '<p>You are badass!</p>';}
+else {finalText.innerHTML = '<img src="https://media.giphy.com/media/44gu1V41ejJni/giphy.gif">' + '<p>You are badass!</p>';}
 
 
 username.addEventListener('keyup', () => {

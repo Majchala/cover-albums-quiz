@@ -105,6 +105,28 @@ h2 {
     margin-left: 1rem;
 }
 
+#end p {
+    color: var(--green-color);
+    padding: 2rem;
+}
+
+.container #home p {
+    color: white;
+    margin-bottom: 2rem;
+} 
+
+.container #home p,
+.container #home p span {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container #home p span {
+    color: var(--green-color);
+}
+
+
+
 /* FORMS */
 form {
     width: 100%;
@@ -114,7 +136,7 @@ form {
 }
 
 input {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 100%;
     padding: 1.5rem;
     border: none;
@@ -129,6 +151,8 @@ input::placeholder {
 
 #finalText {
     font-size: 3rem;
-    color: white;
+    text-align: center;
 }
+
+
 
