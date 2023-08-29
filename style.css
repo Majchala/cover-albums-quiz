@@ -5,7 +5,6 @@
     --light-color: #FFFAE9;
     --green-color: #30F4D7;
     --dark-green: #1A8D7B;
-
 }
 
 * {
@@ -15,7 +14,6 @@
     font-size: 62.5%;
     color: #333;
     font-family: 'Big Shoulders Inline Text';
-
 }
 
 h1 {
@@ -82,8 +80,7 @@ h2 {
     cursor: pointer;
     box-shadow: 0 0 1.6rem 0 var(--green-color);
     transition: all 0.4s ease-out;
-    transform: scale(1.03);
-    
+    transform: scale(1.03); 
 }
 
 .btn[disabled]:hover {
@@ -125,9 +122,7 @@ h2 {
     color: var(--green-color);
 }
 
-
-
-/* FORMS */
+/* FORM */
 form {
     width: 100%;
     display: flex;
@@ -137,12 +132,11 @@ form {
 
 input {
     margin-bottom: 2rem;
-    width: 100%;
+    width: 30rem;
     padding: 1.5rem;
     border: none;
     font-size: 1.8rem;
     box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 05);
-
 }
 
 input::placeholder {
@@ -154,5 +148,57 @@ input::placeholder {
     text-align: center;
 }
 
+#finalText img {
+    max-width: 40rem;
+}
+
+#finalScore {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* MEDIA QUERIS */
+@media (max-height: 640px) {
+* { font-size: 50%
+    }
+
+#finalScore {
+    font-size: 3rem;
+    }
+
+#finalText p {
+    padding: 1rem;
+    }
+
+.btn {
+    height: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    }
+}
+
+@media (max-width: 513px) {
+* {
+    font-size: 50%
+    }
+
+#finalText p {
+    padding: 1rem;
+    }
+
+#finalText img {
+    max-width: 26rem;
+    }
+}
+
+@media (max-height: 420px) {
+    #finalScore {
+        margin-bottom: 0;
+    }
+}
+
+
+
+    
 
 

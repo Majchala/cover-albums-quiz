@@ -225,7 +225,7 @@ let questions = [
     },
     {
         image: "assets/Q27.png",
-        question: 'The album name?',
+        question: 'The author?',
         choice1: 'The Clash',
         choice2: 'Sex Pistols',
         choice3: 'The Ramones',

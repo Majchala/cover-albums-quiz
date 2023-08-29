@@ -8,7 +8,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const MAX_HIGH_SCORES = 5;
 
-// Výsledek - OPRAVIT JEŠTĚ
+// Score result + result text 
 finalScore.innerText = `You scored ${mostRecentScore} out of 150 points.`;
 
 if (mostRecentScore <= 50) {finalText.innerHTML = '<img src="https://media.giphy.com/media/cr9vIO7NsP5cY/giphy.gif">'
@@ -19,7 +19,7 @@ else {finalText.innerHTML = '<img src="https://media.giphy.com/media/44gu1V41ejJ
 
 
 username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value; // pokud nebude zadané username, tlačítko nebude available
+    saveScoreBtn.disabled = !username.value; // saveBtn not available without username 
 });
 
 saveHighScore = e => {
@@ -29,7 +29,7 @@ saveHighScore = e => {
         score: mostRecentScore,
         name: username.value};
 
-    // uložít se pouze 5 nejvyšších score 
+    // save 5 highest scores 
     highScores.push(score);
     highScores.sort( (a,b) => b.score - a.score);
     highScores.splice(10);

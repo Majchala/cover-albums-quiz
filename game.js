@@ -28,8 +28,7 @@ let availableQuestions = [...questions];
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 15;
 
-//celkově 31 otázek
-
+// GAME 
 const startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -50,43 +49,41 @@ const getNewQuestion = () => {
     // updating the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-    // vypsání náhodné otázky
+    // get random question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
 
-        if (currentQuestion.image) {
+    if (currentQuestion.image) {
         imageContainer.innerHTML = `<img src="${currentQuestion.image}" alt="Obrázek">`;
     } else {
-        imageContainer.innerHTML = ''; // Pokud není obrázek, vymažeme obsah kontejneru
+        imageContainer.innerHTML = ''; 
     }
 
-
-
-    // zobrazení možností k dané otázce
+    // question's options
     choices.forEach(choice => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
     });
 
-    // aby se použité otázky neopakovaly
+    // not repeat used questions
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
-};
+    };
 
-choices.forEach(choice => {
+    choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        if (!acceptingAnswers) return; // pokud to není ready, tak ignorujeme klik
+        if (!acceptingAnswers) return; 
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
-        // class pro správnou/nesprávnou odpoved
+        // correct/incorrect class
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-         // obarvení celého rodiče podle správnosti odpovědi
+         // update the parent class (correct/incorrect)
         selectedChoice.parentElement.classList.add(classToApply);
         
     
@@ -99,12 +96,6 @@ choices.forEach(choice => {
             choices[correctAnswer - 1].parentElement.classList.add('correct');
         }
 
-
-
-
-        
-
-       
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             if (classToApply === "incorrect") {
@@ -112,15 +103,12 @@ choices.forEach(choice => {
             }
             getNewQuestion();
         }, 1000);
+        });
     });
-});
 
     const incrementScore = num => {
         score += num;
         scoreText.innerText = score;
-
     }
 
-
-
-startGame()
+    startGame()
